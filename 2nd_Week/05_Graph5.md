@@ -19,10 +19,10 @@
 - 하나의 소스에서 다른 모든 소스로의 최단경로 알고리즘
 - 방향그래프, 비방향 그래프 모두 적용 가능
 - *가중치값이 음수가 아니어야 한다.*
+- shb : 왜 가중치의 값이 음수가 아니어야 하나?
 
 ![alt text](image-27.png)
 
-10m31s
 ```py
 from heapq import heappush, heappop
 
@@ -79,9 +79,12 @@ def dijkstra(start):
             heappush(pq,(next_dist,next_node)) # next_node의 인접 노드들을 pq에 추가
 
 # path를 추가하는건 힘들다
-# 팁: vst를 append 하는게 아니라 vst를 초기화
-    
+# 팁: vst를 append 하는게 아니라 vst를 초기화    
 ```
 
+### 시간복잡도
 
+![Alt text](image-28.png)
+
+최대: 노드수^2 ,  최소: ElogV
 
